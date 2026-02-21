@@ -3,18 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
     <title>Lessons NYC</title>
     <meta
       name="description"
       content="Lessons NYC: kids lessons program with Music & Voice Lessons, Creative Media Making, and Magic Hands classes."
     />
+
+    <!-- Performance: warm up connections for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Performance: preload the above-the-fold hero image -->
+    <link
+      rel="preload"
+      as="image"
+      href="assets/hero.webp"
+      imagesrcset="assets/hero-640.webp 640w, assets/hero-960.webp 960w, assets/hero-1280.webp 1280w"
+      imagesizes="(max-width: 980px) 92vw, 48vw"
+    />
   </head>
 
   <body>
@@ -75,9 +88,15 @@
 
           <div class="hero-media" aria-label="Kids learning together">
             <img
-              src="assets/hero.jpg"
+              src="assets/hero.webp"
+              srcset="assets/hero-640.webp 640w, assets/hero-960.webp 960w, assets/hero-1280.webp 1280w"
+              sizes="(max-width: 980px) 92vw, 48vw"
+              width="1280"
+              height="1920"
               alt="Happy kids participating in creative lessons"
               loading="eager"
+              decoding="async"
+              fetchpriority="high"
             />
             <div class="hero-badge" aria-hidden="true">
               <span>✨</span>
@@ -101,7 +120,16 @@
             <!-- 01 -->
             <article class="card">
               <div class="card-media">
-                <img src="assets/music.jpg" alt="Microphone and music notes" loading="lazy" />
+                <img
+                  src="assets/music.webp"
+                  srcset="assets/music-400.webp 400w, assets/music-700.webp 700w, assets/music-900.webp 900w"
+                  sizes="(max-width: 980px) 92vw, 33vw"
+                  width="900"
+                  height="600"
+                  alt="Microphone and a child practicing singing"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div class="card-body">
                 <div class="card-top">
@@ -129,7 +157,16 @@
             <!-- 02 -->
             <article class="card">
               <div class="card-media">
-                <img src="assets/media.jpg" alt="Camera and editing timeline" loading="lazy" />
+                <img
+                  src="assets/media.webp"
+                  srcset="assets/media-400.webp 400w, assets/media-700.webp 700w, assets/media-900.webp 900w"
+                  sizes="(max-width: 980px) 92vw, 33vw"
+                  width="900"
+                  height="1350"
+                  alt="Video editing setup for creative media making"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div class="card-body">
                 <div class="card-top">
@@ -158,7 +195,16 @@
             <!-- 03 -->
             <article class="card">
               <div class="card-media">
-                <img src="assets/hands.jpg" alt="Kids crafting and cooking" loading="lazy" />
+                <img
+                  src="assets/hands.webp"
+                  srcset="assets/hands-400.webp 400w, assets/hands-700.webp 700w, assets/hands-900.webp 900w"
+                  sizes="(max-width: 980px) 92vw, 33vw"
+                  width="900"
+                  height="600"
+                  alt="Kids cooking with an instructor in a fun kitchen class"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div class="card-body">
                 <div class="card-top">
@@ -205,10 +251,46 @@
           </div>
 
           <div class="gallery">
-            <img src="assets/gallery-1.jpg" alt="Kid singing during a lesson" loading="lazy" />
-            <img src="assets/gallery-2.jpg" alt="Video editing on a computer screen" loading="lazy" />
-            <img src="assets/gallery-3.jpg" alt="Kids painting at a table" loading="lazy" />
-            <img src="assets/gallery-4.jpg" alt="Family cooking together" loading="lazy" />
+            <img
+              src="assets/gallery-1.webp"
+              srcset="assets/gallery-1-320.webp 320w, assets/gallery-1-560.webp 560w, assets/gallery-1-800.webp 800w"
+              sizes="(max-width: 760px) 92vw, (max-width: 980px) 45vw, 22vw"
+              width="800"
+              height="533"
+              alt="Kid singing during a lesson"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="assets/gallery-2.webp"
+              srcset="assets/gallery-2-320.webp 320w, assets/gallery-2-560.webp 560w, assets/gallery-2-800.webp 800w"
+              sizes="(max-width: 760px) 92vw, (max-width: 980px) 45vw, 22vw"
+              width="800"
+              height="1200"
+              alt="Video editing on a computer screen"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="assets/gallery-3.webp"
+              srcset="assets/gallery-3-320.webp 320w, assets/gallery-3-560.webp 560w, assets/gallery-3-800.webp 800w"
+              sizes="(max-width: 760px) 92vw, (max-width: 980px) 45vw, 22vw"
+              width="800"
+              height="1200"
+              alt="Kids doing arts and crafts"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="assets/gallery-4.webp"
+              srcset="assets/gallery-4-320.webp 320w, assets/gallery-4-560.webp 560w, assets/gallery-4-800.webp 800w"
+              sizes="(max-width: 760px) 92vw, (max-width: 980px) 45vw, 22vw"
+              width="800"
+              height="534"
+              alt="Family cooking together"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -446,6 +528,7 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Performance: defer JS so it doesn't block rendering -->
+    <script src="script.js" defer></script>
   </body>
 </html>
